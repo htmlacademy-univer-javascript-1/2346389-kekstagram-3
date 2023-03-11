@@ -37,8 +37,8 @@ function yearNum() {
 
 const generatePhoto = (number) => ({
   id: number,
-  url: 'photos/' + photoNum() + '.jpg',
-  description: 'Сборная по водному поло ' + yearNum() + 'г.',
+  url: `photos/${  photoNum()  }.jpg`,
+  description: `Сборная по водному поло ${  yearNum()  }г.`,
   likes: getRandom(15, 200),
   comments: getRandom(0, 200),
 });
