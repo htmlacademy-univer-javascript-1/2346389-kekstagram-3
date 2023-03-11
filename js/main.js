@@ -1,4 +1,4 @@
-function getRandom (min, max) {
+function getRandom(min, max) {
   if (min < 0 || max < 0) {
     return('Необходимо использовать только неотрицательные числа');
   }
@@ -9,7 +9,9 @@ function getRandom (min, max) {
   }
 }
 
-function getLength (str, maxLength) {
+getRandom(5, 10);
+
+function getLength(str, maxLength) {
   if (str !== String(str)) {
     return('Вы ввели не строку!');
   }
@@ -18,3 +20,5 @@ function getLength (str, maxLength) {
   }
   return false;
 }
+
+getLength('123', 5);
