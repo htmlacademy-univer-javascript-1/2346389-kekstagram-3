@@ -24,3 +24,34 @@ function getLength(str, maxLength) {
 
 getLength('123', 5);
 getLength('123', 2);
+
+function photoNum() {
+  const x = getRandom(1, 25);
+  return x;
+}
+
+function yearNum() {
+  const x = getRandom(2000, 2010);
+  return x;
+}
+
+const generatePhoto = (number) => ({
+  id: number,
+  url: 'photos/' + photoNum() + '.jpg',
+  description: 'Сборная по водному поло ' + yearNum() + 'г.',
+  likes: getRandom(15, 200),
+  comments: getRandom(0, 200),
+});
+
+const data = [];
+
+const generatePhotos = (number) => {
+  for(let i = 1; i <= number; i++) {
+    data[i] = generatePhoto(i);
+    // eslint-disable-next-line no-console
+    console.log(data[i]);
+  }
+};
+
+// eslint-disable-next-line no-console
+generatePhotos(25);
