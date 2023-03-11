@@ -23,3 +23,4 @@ function getLength(str, maxLength) {
 }
 
 getLength('123', 5);
+getLength('123', 2);
