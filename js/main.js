@@ -1,17 +1,17 @@
-let getRandom = function (min, max) {
+function getRandom (min, max) {
   if (min < 0 || max < 0) {
-    console.log('Необходимо использовать только неотрицательные числа');
+    return('Необходимо использовать только неотрицательные числа');
   }
   if (max<=min) {
-    console.log('Максимальная граница диапазона должна быть больше минимальной');
+    return('Максимальная граница диапазона должна быть больше минимальной');
   } else {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 }
 
-let getLength = function (str, maxLength) {
+function getLength (str, maxLength) {
   if (str !== String(str)) {
-    console.log('Вы ввели не строку!');
+    return('Вы ввели не строку!');
   }
   if (str.length <= maxLength) {
     return true;
