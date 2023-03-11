@@ -10,6 +10,7 @@ function getRandom(min, max) {
 }
 
 getRandom(5, 10);
+getRandom(15, 20);
 
 function getLength(str, maxLength) {
   if (str !== String(str)) {
