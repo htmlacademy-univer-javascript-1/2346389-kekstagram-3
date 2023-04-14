@@ -9,7 +9,6 @@ export function getRandom(min, max) {
   }
 }
 
-
 export function getLength(str, maxLength) {
   if (str !== String(str)) {
     return('Вы ввели не строку!');
@@ -19,3 +18,5 @@ export function getLength(str, maxLength) {
   }
   return false;
 }
+
+//Задание 7 часть 2
