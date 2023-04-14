@@ -2,7 +2,7 @@ import { getRandom } from './util.js';
 
 const generatePhoto = (number) => ({
   id: number,
-  url: `photos/${  photoNum()  }.jpg`,
+  url: `photos/${  number  }.jpg`,
   description: `Сборная по водному поло ${  yearNum()  }г.`,
   likes: getRandom(15, 200),
   comments: getRandom(0, 200),
@@ -15,11 +15,6 @@ export const generatePhotos = (number) => {
   }
   return data;
 };
-
-function photoNum() {
-  const x = getRandom(1, 25);
-  return x;
-}
 
 function yearNum() {
   const x = getRandom(2000, 2010);
