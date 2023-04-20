@@ -19,4 +19,6 @@ export function getLength(str, maxLength) {
   return false;
 }
 
+export const isEscapeKey = (evt) => evt.key === 'Escape';
+
 //Задание 7 часть 2
