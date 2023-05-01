@@ -1,4 +1,6 @@
 import { isEscapeKey } from './util.js';
+import { resetScale } from './size.js';
+import { escapeClearEffects } from './effects.js';
 
 const addButton = document.querySelector('#upload-file');
 const escapeButton = document.querySelector('#upload-cancel');
@@ -36,5 +38,7 @@ function closeWindow() {
   document.querySelector('.img-upload__overlay').classList.add('hidden');
   document.body.classList.remove('modal-open');
   document.removeEventListener('keydown', onEscapeKeydown);
+  escapeClearEffects();
   cleanForm();
+  resetScale();
 }
