@@ -1,7 +1,7 @@
 import { resetScale } from './size.js';
 
-const effects = document.querySelectorAll('.effects__radio');
-const picture = document.querySelector('.img-upload__preview');
+const effects = document.querySelectorAll('.effects__radio'); //радиокнопки
+const picture = document.querySelector('.img-upload__preview'); //картинка внутри
 
 for (let i = 0; i < effects.length; i++) {
   const effect = effects[i];
@@ -40,7 +40,7 @@ sliderValue.value = 100;
 
 sliderElement.noUiSlider.on('update', () => {
   sliderValue.value = sliderElement.noUiSlider.get();
-  currentValuetEffect(sliderValue.value);
+  changeStyle(sliderValue.value);
 });
 
 function setSlider(arg) {
@@ -105,7 +105,7 @@ function setSlider(arg) {
   }
 }
 
-function currentValuetEffect(value) {
+function changeStyle(value) {
   for (const className of picture.classList) {
     if (className === 'effects__preview--chrome') {
       picture.style = `filter: grayscale(${value})`;
@@ -125,7 +125,7 @@ function currentValuetEffect(value) {
   }
 }
 
-export function escapeClearEffects() {
+export function resetEffect() {
   sliderElement.classList.add('visually-hidden');
   for (const className of picture.classList) {
     if (className.startsWith('effects__preview--')) {
