@@ -5,7 +5,6 @@ const sizeDown = document.querySelector('.scale__control--smaller');
 const changheFieldSize = document.querySelector('.scale__control--value');
 const imgSizeChange = document.querySelector('.img-upload__preview');
 
-
 sizeUp.addEventListener('click', () => {
   const currentValue = parseInt(changheFieldSize.value, 10);
   let newValue = currentValue + 25;
@@ -31,8 +30,6 @@ function changheSize(value) {
   imgSizeChange.style = `transform: scale(${value / 100})`;
 }
 
-function resetScale() {
+export function resetScale() {
   changheSize(100);
 }
-
-export {resetScale};
